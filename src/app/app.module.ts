@@ -2,9 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MediaMatcher } from '@angular/cdk/layout';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
+import { HeroListService } from './hero-list.service'
 
 
 
@@ -14,10 +16,11 @@ import { MaterialModule } from './material/material.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [HeroListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

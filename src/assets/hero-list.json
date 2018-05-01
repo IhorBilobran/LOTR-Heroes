@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Frodo Baggins",
+    "race": "Hobbit",
+    "weapon": "Sting and Barrow-blade",
+    "photo": "accets/hero-img/frodo.jpg"
+  },
+  {
+    "name": "Samwise Gamgee",
+    "race": "Hobbit",
+    "weapon": "Barrow blade, also wielded Sting in Cirith Ungol",
+    "photo": "accets/hero-img/sam.jpg"
+  }
+]
