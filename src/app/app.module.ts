@@ -6,8 +6,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
-import { HeroListService } from './hero-list.service'
 
+import { HeroListService } from './hero-list.service'
+import { JsonPipe } from '@angular/common';
 
 
 @NgModule({

@@ -1,3 +1,7 @@
 <button mat-icon-button color='accent'><mat-icon>menu</mat-icon></button>
 <h1>Lord of the ring heroes</h1>
-<button type="button" (click)='show()'>SHOW</button>
+{{hero | json}}
+<li *ngFor='let hero of list | async'>
+	{{hero.name}}
+	<button type="button" (click)='l(hero)'>SHOW</button>
+</li>

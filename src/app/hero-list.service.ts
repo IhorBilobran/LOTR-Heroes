@@ -4,12 +4,14 @@ import { HttpClient } from '@angular/common/http';
 
 import { Hero } from './hero'
 
+import 'rxjs/add/operator/map'
+
 @Injectable()
 export class HeroListService {
 
   constructor(private http: HttpClient ) { }
 
-  get carList() {
-    return this.http.get<Hero[]>('assets/hero-list.json');
+  get list() {
+    return this.http.get<Hero[]>('assets/hero-list.json').map((element) => element);
   }
 }
