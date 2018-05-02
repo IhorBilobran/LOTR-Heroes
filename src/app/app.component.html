@@ -1,7 +1,12 @@
-<button mat-icon-button color='accent'><mat-icon>menu</mat-icon></button>
-<h1>Lord of the ring heroes</h1>
-{{hero | json}}
-<li *ngFor='let hero of list | async'>
-	{{hero.name}}
-	<button type="button" (click)='l(hero)'>SHOW</button>
-</li>
+<mat-sidenav-container>
+<mat-sidenav #sidenav>
+	<li *ngFor='let hero of list | async'>
+		{{hero.name}}
+		<button type="button" (click)='l(hero)'>SHOW</button>
+	</li>
+</mat-sidenav>
+
+<mat-sidenav-content>
+	<button (click)='sidenav.toggle()'>Toggle</button>
+</mat-sidenav-content>
+</mat-sidenav-container>
