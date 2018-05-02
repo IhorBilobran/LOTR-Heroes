@@ -10,12 +10,13 @@ import { HeroListService } from './hero-list.service'
 
 export class AppComponent {
 	public list;
-	public hero;
+	public currentHero;
 	constructor(private HeroListService: HeroListService){
 		this.list = HeroListService.list;
 	}
-	
-	l(obj) {
-		return this.hero = obj;
+
+	setCurentHero(obj) {
+		console.log(obj)
+		return this.currentHero = obj;
 	}
 }
