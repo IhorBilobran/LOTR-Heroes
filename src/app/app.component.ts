@@ -11,12 +11,15 @@ import { HeroListService } from './hero-list.service'
 export class AppComponent {
 	public list;
 	public currentHero;
+	public check: boolean = true
 	constructor(private HeroListService: HeroListService){
 		this.list = HeroListService.list;
 	}
 
 	setCurentHero(obj) {
 		console.log(obj)
-		return this.currentHero = obj;
+		this.currentHero = obj;
+		this.check = false;
 	}
+
 }
