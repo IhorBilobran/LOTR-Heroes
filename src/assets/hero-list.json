@@ -58,5 +58,23 @@
     "race": "Man",
     "weapon": "Sword, Shield, dagger ",
     "photo": "assets/hero-img/boromir.jpg"
+  },
+  {
+    "name": "Elrond",
+    "race": "Half-elven",
+    "weapon": "Hadhafang",
+    "photo": "assets/hero-img/elrond.png"
+  },
+  {
+    "name": "Théoden",
+    "race": "Man",
+    "weapon": "Herugrim",
+    "photo": "assets/hero-img/teoden.png"
+  },
+  {
+    "name": "Galadriel",
+    "race": "Elves",
+    "weapon": "Magic",
+    "photo": "assets/hero-img/gal.jpg"
   }
 ]
