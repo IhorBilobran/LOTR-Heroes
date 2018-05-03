@@ -4,7 +4,12 @@
 		<h1 class="lotr-font">The Lord Of The Ring Heroes</h1>
 		<!-- переключатель звуку по кліку в інтерполяційних дужках значення яке буде тоглитись з компонента -->
 		<!-- <mat-icon>{{'volume_up'}}</mat-icon> -->
-		<button mat-icon-button><mat-icon>{{'volume_off'}}</mat-icon></button>
+		<button (click)='toggleVolume(volumeIcon, audio)' mat-icon-button>
+			<mat-icon [innerText]='volumeCheck' #volumeIcon></mat-icon>
+		</button>
+		<audio autoplay loop muted #audio>
+			 <source src='../assets/music/bg-music.mp3' type="audio/mpeg">
+		</audio>
 	</header>
 
 	<div class="container">
@@ -38,7 +43,7 @@
 					<!-- <div class="hero-description"> -->
 						<h1 class="lotr-font">{{currentHero.name}}</h1>
 						<p>Race: {{currentHero.race}}</p>
-						<p><mat-icon></mat-icon> {{currentHero.weapon}} <mat-icon></mat-icon> </p>
+						<p>Weapon: {{currentHero.weapon}}</p>
 						<img [src]="currentHero.photo" alt="hero-img">
 					<!-- </div> -->
 				</div>
