@@ -7,7 +7,7 @@
 		<button (click)='toggleVolume(volumeIcon, audio)' mat-icon-button>
 			<mat-icon [innerText]='volumeCheck' #volumeIcon></mat-icon>
 		</button>
-		<audio autoplay loop muted #audio>
+		<audio loop muted #audio>
 			 <source src='../assets/music/bg-music.mp3' type="audio/mpeg">
 		</audio>
 	</header>
@@ -21,7 +21,12 @@
 				</li>
 				 -->
 				<mat-list>
-				  <mat-list-item (click)='setCurentHero(hero)' *ngFor="let hero of list | async" >
+					<mat-list-item>
+						<input type="text">
+						<button type="button">search</button>
+					</mat-list-item>
+
+					<mat-list-item (click)='setCurentHero(hero)' *ngFor="let hero of list | async" >
 						<img class="avatar" matListAvatar [src]="hero.photo" alt="...">
 							<!-- <div (click)='setCurentHero(hero)'> -->
 								<h3 matLine> {{hero.name}} </h3>
@@ -51,12 +56,7 @@
 
 		</mat-sidenav-container>
 	</div>
+	<footer>
+		<app-feedback></app-feedback>
+	</footer>
 </div>
-
-<mat-sidenav _ngcontent-c0="" class="mat-drawer mat-sidenav ng-tns-c4-0 ng-trigger ng-trigger-transform
- mat-drawer-side ng-star-inserted" mode="side" opened="true" tabindex="-1" ng-reflect-mode="side"
- ng-reflect-opened="true" style="transform: translate3d(0px, 0px, 0px); visibility: visible;">
-
-<mat-sidenav _ngcontent-c0="" class="mat-drawer mat-sidenav ng-tns-c4-0 ng-trigger ng-trigger-transform
- mat-drawer-side ng-star-inserted" mode="side" opened="true" tabindex="-1" ng-reflect-mode="side"
- ng-reflect-opened="true" style="transform: translate3d(0px, 0px, 0px); visibility: visible;">

@@ -9,11 +9,13 @@ import { MaterialModule } from './material/material.module';
 
 import { HeroListService } from './hero-list.service'
 import { JsonPipe } from '@angular/common';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

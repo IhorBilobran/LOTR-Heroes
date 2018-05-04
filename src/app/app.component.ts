@@ -18,12 +18,11 @@ export class AppComponent {
 	}
 
 	setCurentHero(obj: object): any {
-		console.log(obj)
 		this.currentHero = obj;
 		this.check = false;
 	}
 
-	toggleVolume(icon, audio) {
+	toggleVolume(icon: any, audio: any) {
 		switch(icon._elementRef.nativeElement.innerText) {
 			case 'volume_up': this.volume = 0.0; break;
 			case 'volume_off': this.volume = 1.0; break;
@@ -37,5 +36,4 @@ export class AppComponent {
 		}
 		return 'volume_up';
 	}
-
 }

@@ -11,7 +11,7 @@ export class HeroListService {
 
   constructor(private http: HttpClient ) { }
 
-  get list() {
+  get list(){
     return this.http.get<Hero[]>('assets/hero-list.json')
     	.map((element) => element
     		 .sort( (a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0) )
