@@ -13,6 +13,8 @@ export class AppComponent {
 	public currentHero;
 	public check: boolean = true;
 	public volume: number = 1.0;
+	public searchValue: string = '';
+
 	constructor(private HeroListService: HeroListService){
 		this.list = HeroListService.list;
 	}
@@ -35,5 +37,13 @@ export class AppComponent {
 			return 'volume_off';
 		}
 		return 'volume_up';
+	}
+
+	// fix here
+	search(name: string): boolean {
+		if (~name.toLowerCase().indexOf(this.searchValue)) {
+			return true;
+		}
+		return false;
 	}
 }
