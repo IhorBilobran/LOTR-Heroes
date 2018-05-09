@@ -39,13 +39,7 @@
 			</mat-sidenav>
 
 			<mat-sidenav-content >
-				<div class="container gif" *ngIf='check'></div>
-				<div class="container bg" *ngIf='currentHero'>
-					<h1 class="lotr-font">{{currentHero.name}}</h1>
-					<p>Race: {{currentHero.race}}</p>
-					<p>Weapon: {{currentHero.weapon}}</p>
-					<img [src]="currentHero.photo" alt="hero-img">
-				</div>
+				<app-hero-detail [check]='check' [currentHero]='currentHero'></app-hero-detail>	
 			</mat-sidenav-content>
 
 		</mat-sidenav-container>

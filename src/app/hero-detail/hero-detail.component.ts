@@ -1,0 +1,23 @@
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Hero } from '../hero'
+
+@Component({
+  selector: 'app-hero-detail',
+  templateUrl: './hero-detail.component.html',
+  styleUrls: ['./hero-detail.component.sass']
+})
+export class HeroDetailComponent implements OnInit {
+	
+	@Input()
+	currentHero: Hero;
+
+	@Input()
+	check: boolean;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
