@@ -1,0 +1,50 @@
+	<div class="main">
+	<header>
+		<button (click)='sidenav.toggle()' mat-button><mat-icon class="menu-button">menu</mat-icon></button>
+		<h1 class="lotr-font">The Lord Of The Ring Heroes</h1>
+
+		<button (click)='toggleVolume(volumeIcon, audio)' mat-icon-button>
+			<mat-icon [innerText]='volumeCheck' #volumeIcon></mat-icon>
+		</button>
+		<audio loop muted autoplay #audio>
+			 <source src='../assets/music/bg-music.mp3' type="audio/mpeg">
+		</audio>
+	</header>
+
+	<div class="container">
+		<mat-sidenav-container>
+
+			<mat-sidenav #sidenav mode="side" opened='false'>
+
+				<mat-list>
+					<mat-list-item>
+						<input [(ngModel)]='searchValue' type="text">
+						<button type="button">search</button>
+					</mat-list-item>
+
+					<ng-container *ngFor="let hero of list | async">
+						<mat-list-item *ngIf='search(hero.name)' (click)='setCurentHero(hero)' >
+							<img class="avatar" matListAvatar [src]="hero.photo" alt="...">
+								<!-- <div (click)='setCurentHero(hero)'> -->
+									<h3 matLine> {{hero.name}} </h3>
+							    <p matLine>
+							      <span class="elven-font"> {{hero.name}} </span>
+							    </p>
+								<!-- </div> -->
+								<div class="img-ring"></div>
+					  </mat-list-item>
+				  </ng-container>
+				</mat-list>
+
+			</mat-sidenav>
+
+			<mat-sidenav-content >
+				<app-hero-detail [check]='check' [currentHero]='currentHero'></app-hero-detail>	
+			</mat-sidenav-content>
+
+		</mat-sidenav-container>
+	</div>
+	<footer>
+		<app-feedback></app-feedback>
+	</footer>
+</div>
