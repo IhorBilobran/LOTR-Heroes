@@ -12,13 +12,15 @@ import { HeroListService } from './hero-list.service'
 import { JsonPipe } from '@angular/common';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FeedbackComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
