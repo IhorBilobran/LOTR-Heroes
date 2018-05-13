@@ -13,6 +13,7 @@ import { JsonPipe } from '@angular/common';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeaderComponent } from './header/header.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HeaderComponent } from './header/header.component';
     AppComponent,
     FeedbackComponent,
     HeroDetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

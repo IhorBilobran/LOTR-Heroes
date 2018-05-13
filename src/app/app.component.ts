@@ -11,12 +11,16 @@ import { HeroListService } from './hero-list.service'
 export class AppComponent {
 	public list;
 	public currentHero;
-	public check: boolean = true;
-	public volume: number = 1.0;
+	public check: boolean = true;	
 	public searchValue: string = '';
+	public sideNavDis: boolean = false;
 
 	constructor(private HeroListService: HeroListService){
 		this.list = HeroListService.list;
+	}
+
+	toggle($event) {
+		this.sideNavDis = $event;
 	}
 
 	setCurentHero(obj: object): any {
@@ -24,26 +28,11 @@ export class AppComponent {
 		this.check = false;
 	}
 
-	toggleVolume(icon: any, audio: any) {
-		switch(icon._elementRef.nativeElement.innerText) {
-			case 'volume_up': this.volume = 0.0; break;
-			case 'volume_off': this.volume = 1.0; break;
-		}
-		return audio.volume = this.volume;
-	}
-
-	get volumeCheck() {
-		if (this.volume < 1) {
-			return 'volume_off';
-		}
-		return 'volume_up';
-	}
-
-	// fix here
 	search(name: string): boolean {
 		if (~name.toLowerCase().indexOf(this.searchValue)) {
 			return true;
 		}
 		return false;
 	}
+
 }

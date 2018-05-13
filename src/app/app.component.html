@@ -1,12 +1,12 @@
 <div class="main">
 	
 	<!-- @input @output .emit must have -->
-	<app-header></app-header>
+	<app-header [sideNavDis]='sideNavDis' (toggleEvent)='toggle($event)' ></app-header>
 
 	<div class="container">
 		<mat-sidenav-container>
 
-			<mat-sidenav #sidenav mode="side" opened='false'>
+			<mat-sidenav mode="side" [opened]='sideNavDis'>
 
 				<mat-list>
 					<mat-list-item>
