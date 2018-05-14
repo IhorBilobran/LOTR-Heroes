@@ -28,6 +28,10 @@ export class AppComponent {
 		this.check = false;
 	}
 
+	setValue($event) {
+		this.searchValue = $event;
+	}
+
 	search(name: string): boolean {
 		if (~name.toLowerCase().indexOf(this.searchValue)) {
 			return true;

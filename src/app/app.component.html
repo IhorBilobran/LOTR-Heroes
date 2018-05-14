@@ -10,9 +10,9 @@
 
 				<mat-list>
 					<mat-list-item>
-						<mat-form-field color='accent'>
- 						<input matInput type="search" color='accent' placeholder="Search" [(ngModel)]='searchValue'>
- 				 		</mat-form-field>
+
+						<app-search (searchEvent)='setValue($event)'></app-search>
+
 					</mat-list-item>
 
 					<ng-container *ngFor="let hero of list | async">

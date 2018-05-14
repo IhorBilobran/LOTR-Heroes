@@ -1,3 +1,11 @@
-<p>
-  search works!
-</p>
+<mat-form-field 
+	color='accent'>
+	<input 
+		#sInput
+		matInput 
+		type="search" 
+		color='accent' 
+		placeholder="Search"
+		(keyup)='searchValue()'
+		[(ngModel)]='value'>
+</mat-form-field>
