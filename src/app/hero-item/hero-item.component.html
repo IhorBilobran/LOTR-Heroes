@@ -1,0 +1,8 @@
+<mat-list-item *ngIf='search(hero.name)' (click)='setCurentHero(hero)' >
+	<img class="avatar" matListAvatar [src]="hero.photo" alt="...">
+	<h3 matLine> {{hero.name}} </h3>
+	<p matLine>
+	<span class="elven-font"> {{hero.name}} </span>
+	</p>
+	<div class="img-ring"></div>
+</mat-list-item>

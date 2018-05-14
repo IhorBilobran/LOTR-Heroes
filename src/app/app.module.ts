@@ -14,6 +14,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
+import { HeroItemComponent } from './hero-item/hero-item.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { SearchComponent } from './search/search.component';
     FeedbackComponent,
     HeroDetailComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    HeroItemComponent
   ],
   imports: [
     BrowserModule,

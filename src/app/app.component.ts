@@ -23,8 +23,8 @@ export class AppComponent {
 		this.sideNavDis = $event;
 	}
 
-	setCurentHero(obj: object): any {
-		this.currentHero = obj;
+	setCurentHero(hero): any {
+		this.currentHero = hero;
 		this.check = false;
 	}
 
@@ -32,11 +32,5 @@ export class AppComponent {
 		this.searchValue = $event;
 	}
 
-	search(name: string): boolean {
-		if (~name.toLowerCase().indexOf(this.searchValue)) {
-			return true;
-		}
-		return false;
-	}
 
 }
