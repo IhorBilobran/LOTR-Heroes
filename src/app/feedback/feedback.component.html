@@ -7,8 +7,10 @@
     </div>
   </div>
   <div class="form-section">
-    <form>
-      <h1>im form</h1>
+    <form [formGroup]='feedbackForm'>
+      <input [formControl]="feedbackForm.controls['userMail']">
+      <textarea [formControl]="feedbackForm.controls['feedback']"></textarea>
+      <button (click)='show(feedbackForm.value)'>Fire the Gondor lighthouse</button>
     </form>
   </div>
 </main>
