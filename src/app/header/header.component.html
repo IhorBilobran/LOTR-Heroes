@@ -1,5 +1,7 @@
-	<button (click)='toggleNav()' mat-button><mat-icon class="menu-button">menu</mat-icon></button>
-
+<main>
+	<button (click)='toggleNav()' mat-button>
+		<mat-icon class="menu-button">menu</mat-icon>
+	</button>
 	<h1 class="lotr-font">The Lord Of The Ring Heroes</h1>
 	<button (click)='toggleVolume(volumeIcon, audio)' mat-icon-button>
 		<mat-icon [innerText]='volumeCheck' #volumeIcon></mat-icon>
@@ -7,3 +9,4 @@
 	<audio loop muted #audio>
 		 <source src='../assets/music/bg-music.mp3' type="audio/mpeg">
 	</audio>
+</main>

@@ -1,3 +1,16 @@
 <main>
-  <p>here will bee feedback component</p>
+  <div class="main-desc">
+    <div class="title lotr-font">Your feedback is appreciated</div>
+    <div class="desc">Send us comments, feedbacks, suggestion, or problems you've encountered on this website so we can fix them right away.</div>
+    <div class="ring-wrapper">
+      <div class="ring"></div>
+    </div>
+  </div>
+  <div class="form-section">
+    <form [formGroup]='feedbackForm'>
+      <input [formControl]="feedbackForm.controls['userMail']">
+      <textarea [formControl]="feedbackForm.controls['feedback']"></textarea>
+      <button (click)='show(feedbackForm.value)'>Fire the Gondor lighthouse</button>
+    </form>
+  </div>
 </main>

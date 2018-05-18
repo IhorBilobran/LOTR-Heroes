@@ -1,7 +1,22 @@
 main
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
+  padding: 30px 10px
+  background-color: #232222
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr
+
+  title
+    margin-bottom: 10px
+
+  form
+    display: flex
+    flex-direction: column
+    padding: 0 20px
+
+    label
+      input
+        width: 100%
+
+    textarea
+      margin: 20px 0
+      height: 170px
