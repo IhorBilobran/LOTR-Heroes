@@ -6,7 +6,7 @@
 	<button (click)='toggleVolume(volumeIcon, audio)' mat-icon-button>
 		<mat-icon [innerText]='volumeCheck' #volumeIcon></mat-icon>
 	</button>
-	<audio loop muted #audio>
+	<audio loop muted autoplay #audio>
 		 <source src='../assets/music/bg-music.mp3' type="audio/mpeg">
 	</audio>
 </main>

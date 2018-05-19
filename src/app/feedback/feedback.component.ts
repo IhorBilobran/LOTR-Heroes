@@ -13,13 +13,17 @@ export class FeedbackComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.feedbackForm = fb.group({
-      'userMail': ['some'],
-      'feedback': ['feedback']
+      'userMail': ['',[Validators.required, Validators.email]],
+      'feedback': ['',[Validators.required]]
     });
   }
 
   show(val) {
-    alert(JSON.stringify(val))
+    console.log(this.feedbackForm.valid)
+    if (this.feedbackForm.valid) {
+      alert('Done')
+      console.log(this.feedbackForm)
+    }
   }
 
   ngOnInit() {

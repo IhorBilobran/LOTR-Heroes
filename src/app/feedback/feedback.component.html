@@ -8,9 +8,11 @@
   </div>
   <div class="form-section">
     <form [formGroup]='feedbackForm'>
-      <input [formControl]="feedbackForm.controls['userMail']">
+      <mat-form-field color='accent'>
+        <input color='accent' matInput placeholder="Your email" [formControl]="feedbackForm.controls['userMail']">
+      </mat-form-field>
       <textarea [formControl]="feedbackForm.controls['feedback']"></textarea>
-      <button (click)='show(feedbackForm.value)'>Fire the Gondor lighthouse</button>
+      <button [disabled]='!feedbackForm.valid' (click)='show(feedbackForm.value)' mat-button>Fire the Gondor lighthouse</button>
     </form>
   </div>
 </main>
