@@ -22,20 +22,14 @@ export class FeedbackComponent implements OnInit {
     this.feedback = this.feedbackForm.controls['feedback'];
   }
 
-  // fix here
-  clearForm() {
-    console.log(this.userMail);
-    this.userMail;
-    this.feedback;
-  }
-
   show(val) {
-    console.log(this.feedbackForm.valid)
+    console.log(val)
     if (this.feedbackForm.valid) {
       alert('Done')
       console.log(this.feedbackForm)
     }
-    this.clearForm();
+    // reset values
+    this.feedbackForm.reset();
   }
 
   ngOnInit() {
