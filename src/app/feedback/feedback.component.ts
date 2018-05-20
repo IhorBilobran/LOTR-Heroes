@@ -9,6 +9,8 @@ import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/fo
 export class FeedbackComponent implements OnInit {
 
   public feedbackForm: FormGroup
+  public userMail: AbstractControl;
+  public feedback: AbstractControl;
 
 
   constructor(private fb: FormBuilder) {
@@ -16,6 +18,15 @@ export class FeedbackComponent implements OnInit {
       'userMail': ['',[Validators.required, Validators.email]],
       'feedback': ['',[Validators.required]]
     });
+    this.userMail = this.feedbackForm.controls['userMail'];
+    this.feedback = this.feedbackForm.controls['feedback'];
+  }
+
+  // fix here
+  clearForm() {
+    console.log(this.userMail);
+    this.userMail;
+    this.feedback;
   }
 
   show(val) {
@@ -24,6 +35,7 @@ export class FeedbackComponent implements OnInit {
       alert('Done')
       console.log(this.feedbackForm)
     }
+    this.clearForm();
   }
 
   ngOnInit() {
